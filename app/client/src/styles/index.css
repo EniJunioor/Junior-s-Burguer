@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 shadow-sm transition-all;
+  }
+  .input-field:focus {
+    @apply scale-105;
+  }
+  .btn-primary {
+    @apply bg-red-500 text-white font-bold py-3 rounded-lg hover:bg-red-600 transition-all shadow-md;
+  }
+  .btn-google {
+    @apply flex items-center justify-center border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-200 transition-all shadow-sm;
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out;
+  }
+  .animate-slideIn {
+    animation: slideIn 0.5s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slideIn {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
