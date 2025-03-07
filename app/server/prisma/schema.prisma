@@ -1,0 +1,95 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Usuario {
+  id      String   @id @default(uuid())
+  nome    String
+  email   String   @unique
+  senha   String
+  role    Role     @default(CLIENTE)
+  pedidos Pedido[]
+}
+
+model Funcionario {
+  id      String   @id @default(uuid())
+  nome    String
+  email   String   @unique
+  senha   String
+  role    Role     @default(BALCAO)
+  pedidos Pedido[] @relation("FuncionarioPedidos")
+}
+
+model Produto {
+  id        String       @id @default(uuid())
+  nome      String       @unique
+  descricao String?
+  preco     Float
+  estoque   Int?         @default(0)
+  categoria Categoria    @default(OUTRO)
+  imagem    String?      // URL da imagem do produto
+  createdAt DateTime     @default(now())  // Data de criação
+  updatedAt DateTime     @updatedAt       // Data de atualização automática
+
+  itens     ItemPedido[]
+}
+
+model ItemPedido {
+  id         String  @id @default(uuid())
+  quantidade Int
+  preco      Float
+  pedidoId   String
+  produtoId  String
+  pedido     Pedido  @relation(fields: [pedidoId], references: [id], onDelete: Cascade)
+  produto    Produto @relation(fields: [produtoId], references: [id])
+  pontoCarne String? // NOVO: armazenar o ponto da carne
+  customizacoes CustomizacaoItemPedido[] // NOVO: relação com extras
+}
+
+model CustomizacaoItemPedido {
+  id          String  @id @default(uuid())
+  nome        String  // Nome do extra (ex: queijo, bacon)
+  preco       Float   // Preço adicional do extra
+  itemPedidoId String
+  itemPedido  ItemPedido @relation(fields: [itemPedidoId], references: [id], onDelete: Cascade)
+}
+
+model Pedido {
+  id            String       @id @default(uuid())
+  cliente       String
+  status        Status       @default(PENDENTE)
+  usuarioId     String
+  funcionarioId String?
+  itens         ItemPedido[]
+  funcionario   Funcionario? @relation("FuncionarioPedidos", fields: [funcionarioId], references: [id])
+  usuario       Usuario      @relation(fields: [usuarioId], references: [id])
+}
+
+enum Categoria {
+  COMBO
+  PROMOCAO
+  HAMBURGUER
+  PORCAO
+  BEBIDA
+  SOBREMESA
+  OUTRO
+}
+
+enum Role {
+  BALCAO
+  COZINHA
+  ADMIN
+  CLIENTE
+}
+
+enum Status {
+  PENDENTE
+  PREPARANDO
+  FINALIZADO
+}
