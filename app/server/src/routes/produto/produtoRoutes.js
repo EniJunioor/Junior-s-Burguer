@@ -1,14 +1,14 @@
 import express from "express";
 import multer from "multer";
 import path from "path";
-import { autenticarToken } from "../middlewares/authMiddleware.js";
+import { autenticarToken } from "../../middlewares/authMiddleware.js";
 import {
     criarProduto,
     listarProdutos,
     buscarProdutoPorId,
     atualizarProduto,
     deletarProduto
-} from "../controllers/produtoController.js";
+} from "../../controllers/produto/produtoController.js";
 
 const router = express.Router();
 
