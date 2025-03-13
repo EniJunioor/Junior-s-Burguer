@@ -1,0 +1,37 @@
+[2025-03-13 11:11:37] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 11:11:38] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-13 11:21:19] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 11:21:19] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-13 11:56:08] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 11:56:09] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-13 12:00:48] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 12:00:48] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-13 13:36:58] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 13:36:59] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-13 13:41:39] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 13:41:39] ERROR: Erro não tratado: listen EADDRINUSE: address already in use :::5000
+[2025-03-13 13:41:42] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 13:41:43] ERROR: Erro não tratado: listen EADDRINUSE: address already in use :::5000
+[2025-03-13 13:41:46] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 13:41:46] ERROR: Erro não tratado: listen EADDRINUSE: address already in use :::5000
+[2025-03-13 13:41:50] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 13:41:50] ERROR: Erro não tratado: listen EADDRINUSE: address already in use :::5000
+[2025-03-13 13:41:54] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 13:41:54] ERROR: Erro não tratado: listen EADDRINUSE: address already in use :::5000
+[2025-03-13 13:41:58] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 13:41:58] ERROR: Erro não tratado: listen EADDRINUSE: address already in use :::5000
+[2025-03-13 13:42:06] ERROR: ❌ Erro ao iniciar servidor: Can't reach database server at `ep-super-dawn-a4nto68w-pooler.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-dawn-a4nto68w-pooler.us-east-1.aws.neon.tech:5432`.
+[2025-03-13 13:42:13] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 13:42:14] ERROR: Erro não tratado: listen EADDRINUSE: address already in use :::5000
+[2025-03-13 13:42:17] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 13:42:17] ERROR: Erro não tratado: listen EADDRINUSE: address already in use :::5000
+[2025-03-13 13:42:20] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 13:42:20] ERROR: Erro não tratado: listen EADDRINUSE: address already in use :::5000
+[2025-03-13 13:42:26] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 13:42:26] ERROR: Erro não tratado: listen EADDRINUSE: address already in use :::5000
+[2025-03-13 13:42:29] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 13:42:29] ERROR: Erro não tratado: listen EADDRINUSE: address already in use :::5000
+[2025-03-13 13:42:49] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 13:42:50] INFO: 🚀 Servidor rodando na porta 5000

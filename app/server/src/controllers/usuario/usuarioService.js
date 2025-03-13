@@ -1,32 +1,47 @@
-// services/usuarioService.js
 import bcrypt from "bcryptjs";
 import prisma from "../../config/db.js";
 import jwt from "jsonwebtoken";
 
+const SALT_ROUNDS = 12; // Melhor segurança nas senhas
+
+// Buscar usuário pelo e-mail
+export const buscarUsuarioPorEmail = async (email) => {
+    return await prisma.usuario.findUnique({ where: { email } });
+};
+
 // Registrar um novo usuário
 export const registrarUsuario = async ({ nome, email, senha }) => {
     if (!nome || !email || !senha) {
-        throw new Error("Todos os campos são obrigatórios");
+        throw new Error("Todos os campos são obrigatórios.");
     }
 
-    const usuarioExistente = await prisma.usuario.findFirst({ where: { email } });
+    const usuarioExistente = await buscarUsuarioPorEmail(email);
     if (usuarioExistente) {
-        throw new Error("E-mail já cadastrado");
+        throw new Error("E-mail já cadastrado.");
     }
 
-    const senhaHash = await bcrypt.hash(senha, 10);
+    const senhaHash = await bcrypt.hash(senha, SALT_ROUNDS);
     return await prisma.usuario.create({
         data: { nome, email, senha: senhaHash }
     });
 };
 
-// Login de usuário
+// Atualizar a senha de um usuário
+export const atualizarSenha = async (email, novaSenha) => {
+    const novoHash = await bcrypt.hash(novaSenha, SALT_ROUNDS);
+    await prisma.usuario.update({
+        where: { email },
+        data: { senha: novoHash },
+    });
+};
+
+// Login de usuário com atualização de senha, se necessário
 export const loginUsuario = async ({ email, senha }) => {
     if (!email || !senha) {
         throw new Error("Email e senha são obrigatórios.");
     }
 
-    const usuario = await prisma.usuario.findUnique({ where: { email } });
+    const usuario = await buscarUsuarioPorEmail(email);
     if (!usuario) {
         throw new Error("Usuário não encontrado.");
     }
@@ -34,6 +49,11 @@ export const loginUsuario = async ({ email, senha }) => {
     const senhaCorreta = await bcrypt.compare(senha, usuario.senha);
     if (!senhaCorreta) {
         throw new Error("Senha incorreta.");
+    }
+
+    // Se a senha estiver usando um hash antigo, atualiza para um mais seguro
+    if (bcrypt.getRounds(usuario.senha) < SALT_ROUNDS) {
+        await atualizarSenha(email, senha);
     }
 
     if (!process.env.JWT_SECRET) {
@@ -55,7 +75,7 @@ export const listarUsuarios = async () => {
 export const deletarUsuario = async (id) => {
     const usuario = await prisma.usuario.findUnique({ where: { id } });
     if (!usuario) {
-        throw new Error("Usuário não encontrado");
+        throw new Error("Usuário não encontrado.");
     }
     await prisma.usuario.delete({ where: { id } });
     return { message: "Usuário deletado com sucesso!" };

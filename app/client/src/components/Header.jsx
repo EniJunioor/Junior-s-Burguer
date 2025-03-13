@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/Logoburguer.png";
 import { Menu, ShoppingBag, User, Utensils, LogOut, Moon } from "lucide-react";
-import CarrinhoModal from "./CarrinhoModal"; 
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

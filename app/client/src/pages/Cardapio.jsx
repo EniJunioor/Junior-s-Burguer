@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import CustomizacaoModal from "../components/CustomizacaoModal";
 import { buscarProdutos } from "../services/firebaseService";
-import { useProductContext } from "../context/ProductContext";
+;
 
 export default function Menu({ addToCart: propAddToCart }) {
   const { addToCart: contextAddToCart } = useProductContext();

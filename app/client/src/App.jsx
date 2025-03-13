@@ -3,8 +3,7 @@ import { ProductProvider } from "./context/ProductContext";
 import Login from "./pages/Login";
 import Cardapio from "./pages/Cardapio";
 import Header from "./components/Header";
-import CriarProduto from "./components/CriarProduto"
-import CarrinhoModal from "./components/CarrinhoModal";
+i
 
 function Layout() {
   const location = useLocation();
@@ -14,10 +13,9 @@ function Layout() {
     <ProductProvider> 
       {!hideHeaderRoutes.includes(location.pathname.toLowerCase()) && <Header />}
       <Routes>
-        <Route path="/" element={<CarrinhoModal />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cardapio" element={<Cardapio />} />
-        <Route path="/criar-produto" element={<CriarProduto />} />
+        
       </Routes>
     </ProductProvider>
   );

@@ -1,6 +1,10 @@
 import * as usuarioService from "../usuario/usuarioService.js";
-import { enviarSms } from "../../services/smsService.js";
-import redis from "../../config/redisConfig.js"; 
+import { PrismaClient } from "@prisma/client";
+import bcrypt from "bcryptjs";
+import logger from "../../config/logger.js";
+
+const prisma = new PrismaClient();
+const SALT_ROUNDS = 12; 
 
 
 // Registrar um novo usuário
@@ -15,32 +19,38 @@ export const registrarUsuario = async (req, res) => {
 
 // Login de usuário
 export const loginUsuario = async (req, res) => {
-    const { email, senha, telefone } = req.body;
+    const { email, senha } = req.body;
 
     try {
         const usuario = await prisma.usuario.findUnique({ where: { email } });
-        if (!usuario || !(await bcrypt.compare(senha, usuario.senha))) {
-            return res.status(401).json({ error: "Credenciais inválidas" });
+
+        if (!usuario) {
+            return res.status(401).json({ error: "Usuário não encontrado" });
         }
 
-        const codigo = Math.floor(100000 + Math.random() * 900000).toString();
+        const senhaCorreta = await bcrypt.compare(senha, usuario.senha);
+        if (!senhaCorreta) {
+            return res.status(401).json({ error: "Senha incorreta" });
+        }
 
-        // Salvar no Redis com expiração de 5 minutos
-        await redis.set(`mfa:${telefone}`, codigo, { EX: 300 });
-
-        // Enviar SMS
-        const smsEnviado = await enviarSms(telefone, codigo);
-        if (!smsEnviado) {
-            return res.status(500).json({ error: "Erro ao enviar código" });
+        // Atualiza o hash da senha caso esteja com rounds antigos
+        const senhaPrecisaAtualizar = bcrypt.getRounds(usuario.senha) < SALT_ROUNDS;
+        if (senhaPrecisaAtualizar) {
+            const novoHash = await bcrypt.hash(senha, SALT_ROUNDS);
+            await prisma.usuario.update({
+                where: { email },
+                data: { senha: novoHash },
+            });
         }
 
         res.status(200).json({ message: "Código enviado" });
 
     } catch (error) {
+        logger.error("Erro no login:", error);
         res.status(500).json({ error: "Erro no login" });
     }
+    
 };
-
 
 // Listar usuários
 export const listarUsuarios = async (req, res) => {
