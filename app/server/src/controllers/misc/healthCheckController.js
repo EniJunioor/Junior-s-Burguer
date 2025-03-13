@@ -1,10 +1,12 @@
 import os from "os";
-import prisma from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 import nodemailer from "nodemailer";
+
+const prisma = new PrismaClient();
 
 export const healthCheck = async (req, res) => {
     try {
-        await prisma.$queryRawUnsafe(`SELECT 1`);
+        await prisma.$queryRaw`SELECT 1`;
 
         res.status(200).json({
             status: "OK",

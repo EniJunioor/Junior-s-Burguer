@@ -35,3 +35,21 @@ Please make sure your database server is running at `ep-super-dawn-a4nto68w-pool
 [2025-03-13 13:42:29] ERROR: Erro não tratado: listen EADDRINUSE: address already in use :::5000
 [2025-03-13 13:42:49] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
 [2025-03-13 13:42:50] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-13 14:20:25] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 14:20:26] ERROR: Erro não tratado: listen EADDRINUSE: address already in use :::5000
+[2025-03-13 14:21:34] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 14:21:34] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-13 14:25:31] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 14:25:32] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-13 14:49:22] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 14:49:23] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-13 14:50:42] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 14:50:43] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-13 15:10:17] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 15:10:17] INFO: 🔴 Conectado ao Redis!
+[2025-03-13 15:10:17] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-13 15:23:05] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-13 15:23:05] INFO: 🔴 Conectado ao Redis!
+[2025-03-13 15:23:05] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-13 15:27:35] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-13 15:32:06] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
