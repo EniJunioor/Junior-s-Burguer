@@ -53,3 +53,195 @@ Please make sure your database server is running at `ep-super-dawn-a4nto68w-pool
 [2025-03-13 15:23:05] INFO: 🚀 Servidor rodando na porta 5000
 [2025-03-13 15:27:35] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
 [2025-03-13 15:32:06] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 11:21:02] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-17 11:21:02] INFO: 🔴 Conectado ao Redis!
+[2025-03-17 11:21:02] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-17 11:25:32] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 11:30:02] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 11:34:33] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 11:39:03] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 11:43:33] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 11:48:04] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 11:52:34] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 11:57:04] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 12:01:35] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 12:06:05] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 12:10:35] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 12:15:06] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 12:19:36] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 12:24:07] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 12:28:37] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 12:33:07] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 12:37:38] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 12:42:08] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 12:46:38] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 12:51:09] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 12:55:40] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 13:00:10] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 13:04:40] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 13:09:11] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 13:13:41] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 13:18:11] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 13:22:42] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 13:27:12] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 13:31:43] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 13:36:13] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 13:40:43] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 13:45:14] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 13:49:44] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 13:54:14] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 13:58:45] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 14:03:15] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 14:07:45] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 14:12:16] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 14:16:46] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 14:21:17] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 14:25:47] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 14:30:17] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 14:34:48] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 14:39:18] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 14:43:48] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 14:48:19] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 14:52:49] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 14:57:20] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 15:01:50] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 15:06:20] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 15:10:51] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 15:15:21] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 15:19:52] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-17 15:24:22] INFO: ♻️ Tentando reconectar ao Redis (0 tentativas)
+[2025-03-20 09:06:00] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 09:06:01] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 09:06:01] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 09:43:44] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 09:43:45] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 09:43:45] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 09:52:41] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 09:52:41] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 09:52:41] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 09:56:19] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 09:56:19] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 09:56:19] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 09:57:17] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 09:57:18] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 09:57:18] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 10:08:32] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 10:08:32] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 10:08:32] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 10:11:30] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 10:11:30] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 10:11:30] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 10:15:17] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 10:15:17] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 10:15:17] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 10:19:00] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 10:19:01] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 10:19:01] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 10:20:04] ERROR: Erro no login: secretOrPrivateKey must have a value
+[2025-03-20 10:21:23] ERROR: Erro no login: secretOrPrivateKey must have a value
+[2025-03-20 10:22:07] ERROR: Erro no login: secretOrPrivateKey must have a value
+[2025-03-20 10:22:20] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 10:22:21] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 10:22:21] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 10:22:26] ERROR: Erro no login: secretOrPrivateKey must have a value
+[2025-03-20 10:22:56] ERROR: Erro no login: secretOrPrivateKey must have a value
+[2025-03-20 10:39:32] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 10:39:33] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 10:39:33] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 10:39:38] ERROR: Erro no login: Cannot read properties of undefined (reading 'create')
+[2025-03-20 10:40:28] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 10:40:28] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 10:40:28] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 10:40:32] ERROR: Erro no login: Cannot read properties of undefined (reading 'create')
+[2025-03-20 10:42:08] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 10:42:09] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 10:42:09] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 10:43:33] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 10:43:33] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 10:43:33] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 10:43:44] ERROR: Erro no login: Cannot read properties of undefined (reading 'create')
+[2025-03-20 10:46:03] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 10:46:03] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 10:46:03] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 10:46:49] ERROR: Erro no login: Cannot read properties of undefined (reading 'create')
+[2025-03-20 10:49:54] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 10:49:55] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 10:49:55] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 10:50:00] ERROR: Erro no login: Cannot read properties of undefined (reading 'create')
+[2025-03-20 10:55:05] ERROR: ❌ Erro ao iniciar servidor: Can't reach database server at `ep-super-dawn-a4nto68w-pooler.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-dawn-a4nto68w-pooler.us-east-1.aws.neon.tech:5432`.
+[2025-03-20 10:56:53] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 10:56:53] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 10:56:53] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 10:57:01] ERROR: Erro no login: Cannot read properties of undefined (reading 'create')
+[2025-03-20 11:02:29] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 11:02:29] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 11:02:29] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 11:02:55] ERROR: Erro no login: Cannot read properties of undefined (reading 'create')
+[2025-03-20 11:03:23] ERROR: Erro no login: Cannot read properties of undefined (reading 'create')
+[2025-03-20 11:04:56] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 11:04:56] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 11:04:56] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 11:05:07] ERROR: Erro no login: Cannot read properties of undefined (reading 'create')
+[2025-03-20 11:05:16] ERROR: Erro no login: Cannot read properties of undefined (reading 'create')
+[2025-03-20 11:10:34] ERROR: ❌ Erro ao iniciar servidor: Can't reach database server at `ep-super-dawn-a4nto68w-pooler.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-dawn-a4nto68w-pooler.us-east-1.aws.neon.tech:5432`.
+[2025-03-20 11:19:37] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 11:19:38] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 11:19:38] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 11:19:45] ERROR: Erro no login: Cannot read properties of undefined (reading 'create')
+[2025-03-20 11:29:20] ERROR: Erro no login: Cannot read properties of undefined (reading 'create')
+[2025-03-20 11:32:27] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 11:32:28] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 11:32:28] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 11:32:30] ERROR: Rejeição não tratada: Error: Email e senha são obrigatórios.
+[2025-03-20 14:36:52] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 14:36:53] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 14:36:53] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 14:36:56] ERROR: Rejeição não tratada: Error: Email e senha são obrigatórios.
+[2025-03-20 14:37:22] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 14:37:22] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 14:37:22] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 14:37:27] ERROR: Erro no login: Cannot read properties of undefined (reading 'create')
+[2025-03-20 14:38:13] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 14:38:13] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 14:38:13] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 14:39:56] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 14:39:57] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 14:39:57] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 14:40:05] ERROR: Rejeição não tratada: Error: Email e senha são obrigatórios.
+[2025-03-20 14:44:48] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 14:44:49] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 14:44:49] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 14:44:52] ERROR: Rejeição não tratada: ReferenceError: req is not defined
+[2025-03-20 14:45:43] ERROR: Rejeição não tratada: ReferenceError: req is not defined
+[2025-03-20 14:45:54] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 14:45:54] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 14:45:54] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 14:45:57] ERROR: Rejeição não tratada: ReferenceError: buscarUsuarioPorEmail is not defined
+[2025-03-20 14:48:12] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 14:48:12] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 14:48:12] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 14:53:59] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 14:53:59] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 14:53:59] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 14:59:03] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 14:59:03] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 14:59:03] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 15:16:03] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 15:16:04] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 15:16:04] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 15:21:28] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 15:21:28] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 15:21:28] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 15:24:41] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 15:24:42] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 15:24:42] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 15:26:15] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 15:26:15] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 15:26:15] INFO: 🚀 Servidor rodando na porta 5000
+[2025-03-20 15:26:35] INFO: 🔥 Conectado ao NeonDB PostgreSQL!
+[2025-03-20 15:26:35] INFO: 🔴 Conectado ao Redis!
+[2025-03-20 15:26:35] INFO: 🚀 Servidor rodando na porta 5000

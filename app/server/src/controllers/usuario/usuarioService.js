@@ -42,16 +42,16 @@ export const loginUsuario = async ({ email, senha }) => {
     }
 
     const usuario = await buscarUsuarioPorEmail(email);
-    if (!usuario) {
-        throw new Error("Usuário não encontrado.");
-    }
-
+console.log("Usuário encontrado:", usuario);
+if (!usuario) {
+    throw new Error("Usuário não encontrado.");
+}
     const senhaCorreta = await bcrypt.compare(senha, usuario.senha);
     if (!senhaCorreta) {
         throw new Error("Senha incorreta.");
     }
 
-    // Se a senha estiver usando um hash antigo, atualiza para um mais seguro
+    // Atualizar senha para um hash mais seguro, se necessário
     if (bcrypt.getRounds(usuario.senha) < SALT_ROUNDS) {
         await atualizarSenha(email, senha);
     }
@@ -62,6 +62,25 @@ export const loginUsuario = async ({ email, senha }) => {
 
     const token = jwt.sign({ id: usuario.id }, process.env.JWT_SECRET, { expiresIn: "1h" });
     return { message: "Login bem-sucedido!", token };
+};
+
+// Atualizar um usuário
+export const atualizarUsuario = async (id, { nome, email, senha }) => {
+    const usuario = await prisma.usuario.findUnique({ where: { id } });
+
+    if (!usuario) {
+        throw new Error("Usuário não encontrado.");
+    }
+
+    let senhaHash = usuario.senha;
+    if (senha) {
+        senhaHash = await bcrypt.hash(senha, SALT_ROUNDS);
+    }
+
+    return await prisma.usuario.update({
+        where: { id },
+        data: { nome, email, senha: senhaHash },
+    });
 };
 
 // Listar usuários

@@ -22,37 +22,53 @@ export const registrarUsuario = async (req, res) => {
 
 // Login de usuário com Refresh Token
 export const loginUsuario = async (req, res) => {
-    const { email, senha } = req.body;
     try {
-        const usuario = await prisma.usuario.findUnique({ where: { email } });
+        console.log("🔍 Iniciando login...");
+        
+        const { email, senha } = req.body;
+        if (!email || !senha) {
+            console.error("⚠️ Email e senha são obrigatórios.");
+            return res.status(400).json({ error: "Email e senha são obrigatórios." });
+        }
+
+        const usuario = await usuarioService.buscarUsuarioPorEmail(email);
+        console.log("👤 Usuário encontrado:", usuario);
+
         if (!usuario) {
-            return res.status(401).json({ error: "Usuário não encontrado" });
+            console.error("🚨 Usuário não encontrado:", email);
+            return res.status(404).json({ error: "Usuário não encontrado." });
         }
 
         const senhaCorreta = await bcrypt.compare(senha, usuario.senha);
+        console.log("🔑 Senha correta?", senhaCorreta);
+
         if (!senhaCorreta) {
-            return res.status(401).json({ error: "Senha incorreta" });
+            console.error("❌ Senha incorreta.");
+            return res.status(401).json({ error: "Senha incorreta." });
         }
 
-        // Atualiza o hash da senha caso esteja com rounds antigos
-        const senhaPrecisaAtualizar = bcrypt.getRounds(usuario.senha) < SALT_ROUNDS;
-        if (senhaPrecisaAtualizar) {
-            const novoHash = await bcrypt.hash(senha, SALT_ROUNDS);
-            await prisma.usuario.update({
-                where: { email },
-                data: { senha: novoHash },
-            });
+        // Atualizar senha para um hash mais seguro, se necessário
+        if (bcrypt.getRounds(usuario.senha) < SALT_ROUNDS) {
+            console.log("🔄 Atualizando senha...");
+            await usuarioService.atualizarSenha(email, senha);
         }
 
-        const accessToken = gerarAccessToken(usuario);
-        const refreshToken = await gerarRefreshToken(usuario);
+        if (!process.env.JWT_SECRET) {
+            console.error("🛑 Erro no servidor: chave JWT não configurada.");
+            return res.status(500).json({ error: "Erro no servidor: chave JWT não configurada." });
+        }
 
-        res.status(200).json({ message: "Login bem-sucedido", accessToken, refreshToken });
+        const token = jwt.sign({ id: usuario.id }, process.env.JWT_SECRET, { expiresIn: "1h" });
+        console.log("✅ Login bem-sucedido! Token gerado.");
+
+        return res.status(200).json({ message: "Login bem-sucedido!", token });
+
     } catch (error) {
-        logger.error("Erro no login:", error);
-        res.status(500).json({ error: "Erro no login" });
+        console.error("❌ Erro no login:", error.message);
+        return res.status(500).json({ error: "Erro no login" });
     }
 };
+
 
 // Renova o Access Token
 export const renovarToken = async (req, res) => {
@@ -77,6 +93,20 @@ export const logout = async (req, res) => {
         res.status(200).json({ message: "Logout realizado com sucesso!" });
     } catch (error) {
         res.status(500).json({ error: error.message });
+    }
+};
+
+// Atualizar usuário
+export const atualizarUsuario = async (req, res) => {
+    await client.del("usuarios");
+    try {
+        const { id } = req.params; // ID do usuário a ser atualizado
+        const dadosAtualizados = req.body; // Dados a serem atualizados
+
+        const usuarioAtualizado = await usuarioService.atualizarUsuario(id, dadosAtualizados);
+        res.status(200).json({ message: "Usuário atualizado com sucesso!", usuario: usuarioAtualizado });
+    } catch (error) {
+        res.status(400).json({ error: error.message });
     }
 };
 

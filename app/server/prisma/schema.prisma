@@ -33,31 +33,30 @@ model Produto {
   preco     Float
   estoque   Int?         @default(0)
   categoria Categoria    @default(OUTRO)
-  imagem    String?      // URL da imagem do produto
-  createdAt DateTime     @default(now())  // Data de criação
-  updatedAt DateTime     @updatedAt       // Data de atualização automática
-
+  createdAt DateTime     @default(now())
+  imagem    String?
+  updatedAt DateTime     @updatedAt
   itens     ItemPedido[]
 }
 
 model ItemPedido {
-  id         String  @id @default(uuid())
-  quantidade Int
-  preco      Float
-  pedidoId   String
-  produtoId  String
-  pedido     Pedido  @relation(fields: [pedidoId], references: [id], onDelete: Cascade)
-  produto    Produto @relation(fields: [produtoId], references: [id])
-  pontoCarne String? // NOVO: armazenar o ponto da carne
-  customizacoes CustomizacaoItemPedido[] // NOVO: relação com extras
+  id            String                   @id @default(uuid())
+  quantidade    Int
+  preco         Float
+  pedidoId      String
+  produtoId     String
+  pontoCarne    String?
+  customizacoes CustomizacaoItemPedido[]
+  pedido        Pedido                   @relation(fields: [pedidoId], references: [id], onDelete: Cascade)
+  produto       Produto                  @relation(fields: [produtoId], references: [id])
 }
 
 model CustomizacaoItemPedido {
-  id          String  @id @default(uuid())
-  nome        String  // Nome do extra (ex: queijo, bacon)
-  preco       Float   // Preço adicional do extra
+  id           String     @id @default(uuid())
+  nome         String
+  preco        Float
   itemPedidoId String
-  itemPedido  ItemPedido @relation(fields: [itemPedidoId], references: [id], onDelete: Cascade)
+  itemPedido   ItemPedido @relation(fields: [itemPedidoId], references: [id], onDelete: Cascade)
 }
 
 model Pedido {
